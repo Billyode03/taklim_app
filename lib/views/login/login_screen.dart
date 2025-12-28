@@ -12,7 +12,6 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 56, bottom: 40),
@@ -27,9 +26,20 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                'Username',
-                style: TextContants.textLogo,
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      'Username',
+                      style: TextContants.textLogo,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               Container(
                 width: 350,
@@ -44,6 +54,21 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 20,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      'Password ',
+                      style: TextContants.textLogo,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               Container(
                 width: 350,
@@ -87,14 +112,17 @@ class LoginScreen extends StatelessWidget {
                 height: 45,
                 child: Center(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Masuk Dengan Google',
-                        style: TextStyle(
-                          color: ColorConstant.greenYoung,
-                          fontSize: 17,
-                        ),
+                      Icon(
+                        Icons.home,
+                        color: ColorConstant.greenYoung,
+                        size: 30,
                       ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text('Masuk Dengan Google', style: TextContants.textLogo),
                       // Image.asset(name)
                     ],
                   ),
