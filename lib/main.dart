@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taklim_app/views/login/login_screen.dart';
+import 'package:taklim_app/views/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: LoginScreen(),
+          child: SplashScreen(),
         ),
       ),
     );
